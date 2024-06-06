@@ -17,9 +17,21 @@ namespace PolimorfismoGrafico
 
         private void button1_Click(object sender, EventArgs e)
         {
+            RealizarBusca();
+        }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13) //Tecla Enter Pressionada
+            {
+                RealizarBusca();
+            }
+        }
+
+        private void RealizarBusca()
+        {
             RepositorioClientes repo = new RepositorioClientes();
             bool IsNumber = int.TryParse(txtBusca.Text, out int ID);
-
 
             if (IsNumber)
             {
@@ -34,33 +46,6 @@ namespace PolimorfismoGrafico
 
             }
 
-           
-            
-            
-            
-        }
-
-        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13) //Tecla Enter Pressionada
-            {
-                RepositorioClientes repo = new RepositorioClientes();
-                bool IsNumber = int.TryParse(txtBusca.Text, out int ID);
-
-
-                if (IsNumber)
-                {
-                    //repo.BuscarCliente(ID);
-                    List<RepositorioClientes> listaClientes = repo.BuscarCliente(ID);
-                    dgClientes.DataSource = listaClientes;
-                }
-                else
-                {
-                    List<RepositorioClientes> listaClientes = repo.BuscarCliente(txtBusca.Text);
-                    dgClientes.DataSource = listaClientes;
-
-                }
-            }
         }
     }
 }
