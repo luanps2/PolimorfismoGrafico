@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 
 namespace PolimorfismoGrafico
 {
@@ -30,12 +25,10 @@ namespace PolimorfismoGrafico
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-
                     command.Parameters.AddWithValue("@ID", idCliente);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-
                         while (reader.Read())
                         {
                             RepositorioClientes cliente = new RepositorioClientes();
@@ -44,14 +37,14 @@ namespace PolimorfismoGrafico
                             cliente.Telefone = reader.GetString(2);
 
                             clientes.Add(cliente);
-
                         }
                     }
                 }
             }
-
             return clientes;
         }
+
+
         public List<RepositorioClientes> BuscarCliente(string NomeCliente)
         {
             List<RepositorioClientes> clientes = new List<RepositorioClientes>();
@@ -66,7 +59,6 @@ namespace PolimorfismoGrafico
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-
                         while (reader.Read())
                         {
                             RepositorioClientes cliente = new RepositorioClientes();
@@ -75,14 +67,11 @@ namespace PolimorfismoGrafico
                             cliente.Telefone = reader.GetString(2);
 
                             clientes.Add(cliente);
-
                         }
                     }
                 }
             }
-
             return clientes;
         }
-
     }
 }
