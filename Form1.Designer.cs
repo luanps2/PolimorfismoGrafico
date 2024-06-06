@@ -36,7 +36,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(257, 12);
+            this.button1.Location = new System.Drawing.Point(408, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 23);
             this.button1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.txtBusca.Location = new System.Drawing.Point(12, 12);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(239, 20);
+            this.txtBusca.Size = new System.Drawing.Size(390, 20);
             this.txtBusca.TabIndex = 1;
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
@@ -57,14 +57,14 @@
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(12, 41);
             this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(327, 183);
+            this.dgClientes.Size = new System.Drawing.Size(478, 251);
             this.dgClientes.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 239);
+            this.ClientSize = new System.Drawing.Size(502, 304);
             this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.button1);
