@@ -22,7 +22,6 @@ namespace PolimorfismoGrafico
 
         public List<RepositorioClientes> BuscarCliente(int idCliente)
         {
-
             List<RepositorioClientes> clientes = new List<RepositorioClientes>();
 
             using (SqlConnection connection = conexaoBD.ObterConexao())
